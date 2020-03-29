@@ -11,7 +11,22 @@ In Proc. IEEE International Conference on Computer Vision (ICCV), 2007.
 
 ## Usage
 
-One-liner: `flow_color = flow_vis.flow_to_color(flow_uv, convert_to_bgr=False)`
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import flow_vis
+
+# Load normalized flow image of shape [H,W,2]
+flow_uv = np.load('./data/flow_example_data.npy')
+
+# Apply the coloring (for OpenCV, set convert_to_bgr=True)
+flow_color = flow_vis.flow_to_color(flow_uv, convert_to_bgr=False)
+
+# Display the image
+plt.imshow(flow_color)
+plt.show()
+```
 
 ## Examples visualizations 
 
