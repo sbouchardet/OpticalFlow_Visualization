@@ -6,10 +6,10 @@ setup:
 setup-dev: setup
 	pip install -r requirements-dev.txt
 
-.PHONY
+.PHONY build
 build:
 	python setup.py sdist
 
-.PHONY
+.PHONY deploy
 deploy:
 	twine upload dist/*
