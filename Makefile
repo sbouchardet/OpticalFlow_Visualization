@@ -1,15 +1,15 @@
-.PHONY setup
+.PHONY: setup
 setup:
 	pip install -r requirements.txt
 
-.PHONY setup-dev
+.PHONY: setup-dev
 setup-dev: setup
 	pip install -r requirements-dev.txt
 
-.PHONY build
+.PHONY: build
 build:
 	python setup.py sdist
 
-.PHONY deploy
+.PHONY: deploy
 deploy: build
 	twine upload dist/*
