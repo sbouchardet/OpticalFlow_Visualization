@@ -11,5 +11,5 @@ build:
 	python setup.py sdist
 
 .PHONY deploy
-deploy:
+deploy: build
 	twine upload dist/*
